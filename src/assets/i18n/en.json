@@ -1,0 +1,38 @@
+{
+  "action": {
+    "accept": "Accept",
+    "close": "Close",
+    "reject": "Reject",
+    "retry": "Retry",
+    "yes": "Yes"
+  },
+  "alert": {
+    "danger": "This is Dangerous message",
+    "info": "Your information",
+    "success": "You have done your task",
+    "warning": "This is Warning message"
+  },
+  "dialog": {
+    "alert": {
+      "content": "This is content",
+      "header": "Alert"
+    },
+    "confirm": {
+      "content": "Are you sure to process?",
+      "header": "Confirm"
+    }
+  },
+  "fe": "AT Frontend Team",
+  "form": {
+    "link": "Allow only web address (URL), eg. http://web.com/",
+    "required": "Please enter value"
+  },
+  "nav": {
+    "about": "About",
+    "dashboard": "Introduction",
+    "home": "Home",
+    "service": "Services",
+    "utilities": "Utilities"
+  },
+  "sitename": "Boilerplate Angular"
+}

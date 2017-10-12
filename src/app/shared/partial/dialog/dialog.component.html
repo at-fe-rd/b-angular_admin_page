@@ -1,0 +1,29 @@
+<div class="modal fade show" [ngStyle]="{display: isVisible ? 'block' : 'none'}">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ dialog?.header | translate }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ng-template [ngIf]="dialog.contentType === 'html'">
+        </ng-template>
+        <ng-template [ngIf]="dialog.contentType !== 'html'">
+          {{ dialog?.content | translate:dialog?.contentObj }}
+        </ng-template>
+      </div>
+      <div class="modal-footer">
+        <ng-template [ngIf]="dialog.type === 'alert'">
+          <button class="btn btn-sm {{ dialog?.btnClose?.cls | translate }}" (click)="close()">{{ dialog?.btnClose?.txt | translate }}</button>
+        </ng-template>
+        <ng-template [ngIf]="dialog.type === 'confirm'">
+          <button class="btn btn-sm {{ dialog?.btnReject?.cls | translate }}" (click)="reject()">{{ dialog?.btnReject?.txt | translate }}</button>
+          <button class="btn btn-sm {{ dialog?.btnAccept?.cls | translate }}" (click)="accept()">{{ dialog?.btnAccept?.txt | translate }}</button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade show" [ngStyle]="{display: isVisible ? 'block' : 'none'}"></div>

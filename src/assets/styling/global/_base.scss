@@ -1,0 +1,28 @@
+body {
+  padding-top: 3.5rem;
+}
+
+a {
+  color: $color-primary;
+  transition: all .5s;
+  &:hover {
+    color: $color-secondary;
+    text-decoration: none;
+  }
+}
+
+.main-content {
+  width: 100%;
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+app-dashboard,
+app-service,
+app-utilities {
+  width: 100%;
+}

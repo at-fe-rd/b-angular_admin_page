@@ -1,0 +1,13 @@
+<nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" [routerLink]="['/dashboard']">{{ 'nav.dashboard' | translate }}</a>
+    </li>
+    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" [routerLink]="['/service']">{{ 'nav.service' | translate }}</a>
+    </li>
+    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" [routerLink]="['/utilities']">{{ 'nav.utilities' | translate }}</a>
+    </li>
+  </ul>
+</nav>

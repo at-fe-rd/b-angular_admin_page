@@ -1,0 +1,16 @@
+<main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+  <app-breadcrumb></app-breadcrumb>
+  <div [loading]="isInit" class="main-content">
+    <ng-template [ngIf]="!isInit">
+      <h3>AT Front End Boilerplate for Angular!</h3>
+      <div class="mb-4">
+        This is Boilerplate includes core functions for Web application.
+      </div>
+      <p class="text-sm-left mb-2">- Separating Authentication and Features.</p>
+      <p class="text-sm-left mb-2">- Using JWT for Authentication.</p>
+      <p class="text-sm-left mb-2">- Using Lazy loading.</p>
+      <p class="text-sm-left mb-2">- Support some <a class="" [routerLink]="['/service']">{{ 'nav.service' | translate }}</a></p>
+      <p class="text-sm-left mb-2">- Support some <a class="" [routerLink]="['/utilities']">{{ 'nav.utilities' | translate }}</a></p>
+    </ng-template>
+  </div>
+</main>

@@ -1,0 +1,16 @@
+<ng-template [ngIf]="isEnable">
+  <div class="app-alert">
+    <div class="alert alert-{{config?.type}} alert-dismissible" role="alert">
+      <button type="button" class="close" (click)="hideMsg()"><span>&times;</span></button>
+      <span>{{ config.msg | translate:config.msgObj }}</span>
+      <ng-template [ngIf]="config?.link">
+        <a [routerLink]="[config?.link?.href]"><strong>{{ config?.link?.txt | translate }}</strong></a>
+      </ng-template>
+      <ng-template [ngIf]="config?.sub">
+        <ul *ngFor="let msg of config?.sub">
+          <li>{{ msg | translate }}</li>
+        </ul>
+      </ng-template>
+    </div>
+  </div>
+</ng-template>

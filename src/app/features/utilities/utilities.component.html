@@ -1,0 +1,38 @@
+<main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+  <app-breadcrumb></app-breadcrumb>
+  <div [loading]="isInit" class="main-content">
+    <ng-template [ngIf]="!isInit">
+      <div class="">
+        This boilerplate support some utilities about UI/UX.
+      </div>
+      <div class="mt-4">
+        <h4>Dialog</h4>
+        <button type="button" class="btn btn-outline-secondary" (click)="alertDialog()">Alert</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="confirmDialog()">Confirm</button>
+      </div>
+      <div class="mt-4">
+        <h4>Message</h4>
+        <button type="button" class="btn btn-outline-info" (click)="showMsg('info')">Info</button>
+        <button type="button" class="btn btn-outline-success" (click)="showMsg('success')">Success</button>
+        <button type="button" class="btn btn-outline-warning" (click)="showMsg('warning')">Warning</button>
+        <button type="button" class="btn btn-outline-warning" (click)="showMsg('warning', true)">Warning with Link</button>
+        <button type="button" class="btn btn-outline-danger" (click)="showMsg('danger')">Error</button>
+        <button type="button" class="btn btn-outline-danger" (click)="showMsg('danger', true)">Errors</button>
+      </div>
+      <div class="mt-4">
+        <h4>Progress bar</h4>
+        <button [disabled]="progressBarVisible" type="button" class="btn btn-outline-secondary" (click)="toggleBar(true)">Show</button>
+        <button [disabled]="!progressBarVisible" type="button" class="btn btn-outline-secondary" (click)="toggleBar(false)">Hide</button>
+      </div>
+      <div class="mt-4">
+        <h4>Loading</h4>
+        <button type="button" class="btn btn-outline-secondary" (click)="pageLoading()">Page Loading</button>
+        <span [loading]="isInlineLoading" [inlineOptions]="{hasError: false}">
+          <ng-template [ngIf]="!isInlineLoading">
+            <button type="button" class="btn btn-outline-secondary" (click)="inlineLoading()">Inline Loading</button>
+          </ng-template>
+        </span>
+      </div>
+    </ng-template>
+  </div>
+</main>

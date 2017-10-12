@@ -1,0 +1,59 @@
+<main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+  <app-breadcrumb></app-breadcrumb>
+  <div [loading]="isInit" class="main-content">
+    <ng-template [ngIf]="!isInit">
+      <div class="">
+        This boilerplate support some services.
+      </div>
+      <div class="mt-4">
+        <h4>I18n Service</h4>
+        <div class="">
+          Click to Buttons to switch language
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-secondary btn-sm" (click)="switchLang('vi')">VI</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm" (click)="switchLang('en')">EN</button>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h4>Auth with JWT</h4>
+        <div class="">
+          Using JWT to handle token for Authentication and making HTTP request.
+        </div>
+        <div class="">
+          Methods supported:
+          <span class="badge badge-light">Login</span>
+          <span class="badge badge-light">Logout</span>
+          <span class="badge badge-light">Check token valid</span>
+          <span class="badge badge-light">Get user profile</span>
+          <span class="badge badge-light">Etc..</span>
+        </div>
+        <pre *ngIf="profile">{{ profile | json }}</pre>
+        <button type="button" class="btn btn-outline-info" (click)="getProfile()">Get Profile</button>
+        <button [disabled]="!profile" type="button" class="btn btn-outline-secondary" (click)="clearProfile()">Cancel</button>
+      </div>
+      <div class="mt-4">
+        <h4>Api service</h4>
+        <div class="">
+          Methods supported:
+          <span class="badge badge-light">GET</span>
+          <span class="badge badge-light">POST</span>
+          <span class="badge badge-light">PUT</span>
+          <span class="badge badge-light">DELETE</span>
+          <span class="badge badge-light">Multiple REQUEST</span>
+        </div>
+        <div *ngIf="team" class="card mt-2 mb-2" style="width: 20rem;">
+          <img class="card-img-top rounded-circle" src="./assets/img/fe.png" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title text-center">{{team?.name}}</h4>
+            <p class="card-text mb-0">Established at: {{team?.established}}</p>
+            <p class="card-text mb-0">Manager: {{team?.manager}}</p>
+            <p class="card-text mb-4">Total members: {{team?.members}}</p>
+            <button type="button" class="btn btn-block btn-outline-secondary" (click)="closeTeamDetail()">Cancel</button>
+          </div>
+        </div>
+        <button *ngIf="!team" type="button" class="btn btn-outline-info" (click)="getTeam()">Get Info</button>
+      </div>
+    </ng-template>
+  </div>
+</main>
