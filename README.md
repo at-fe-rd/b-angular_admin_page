@@ -16,20 +16,6 @@ This is a work in progress. Feel free to contribute.
 npm install -g @angular/cli
 ```
 
-### Clone this repository
-
-- *macOS & Linux*
-
-```bash
-git clone --depth 1 git@github.com:AsianTechInc/AT-boilerplate-fe-angular.git && cd AT-boilerplate-fe-angular && rm -rf .git
-```
-
-- *Windows*
-
-```bash
-git clone --depth 1 git@github.com:AsianTechInc/AT-boilerplate-fe-angular.git && cd AT-boilerplate-fe-angular && rd /s /q .git
-```
-
 ### Start or Install an existing project
 
 ```bash
